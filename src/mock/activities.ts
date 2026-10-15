@@ -1,0 +1,273 @@
+import { Activity } from '../types';
+
+export const mockActivities: Activity[] = [
+  {
+    id: 'act-001',
+    agentId: 'financial-analysis-agent',
+    agentName: 'Financial Analysis Agent',
+    action: 'access_customer_transactions',
+    actionDescription: 'Requested access to customer transaction data for anomaly investigation',
+    system: 'Customer Data Platform',
+    systemId: 'customer-data-platform',
+    dataInvolved: 'Customer transaction records',
+    policyId: 'sensitive-data-policy',
+    policyName: 'Sensitive Data Policy',
+    risk: 'high',
+    status: 'approval_required',
+    timestamp: '2026-09-25T10:42:00Z',
+    technical: {
+      requestId: 'req-1042',
+      agentId: 'financial-analysis-agent',
+      policyId: 'sensitive-data-policy',
+      apiEndpoint: '/api/v1/customers/transactions/query',
+      responseCode: 403,
+      executionDuration: '145ms',
+      environment: 'production'
+    }
+  },
+  {
+    id: 'act-002',
+    agentId: 'financial-analysis-agent',
+    agentName: 'Financial Analysis Agent',
+    action: 'read_financial_transactions',
+    actionDescription: 'Read financial transaction dataset',
+    system: 'Financial Database',
+    systemId: 'financial-db',
+    dataInvolved: 'Financial transaction records',
+    risk: 'low',
+    status: 'allowed',
+    timestamp: '2026-09-25T10:39:00Z',
+    technical: {
+      requestId: 'req-1039',
+      agentId: 'financial-analysis-agent',
+      apiEndpoint: '/api/v1/db/query/transactions',
+      responseCode: 200,
+      executionDuration: '85ms',
+      environment: 'production'
+    }
+  },
+  {
+    id: 'act-003',
+    agentId: 'collections-assistant',
+    agentName: 'Collections Assistant',
+    action: 'export_customer_records',
+    actionDescription: 'Attempted to export restricted customer records',
+    system: 'Customer Data Platform',
+    systemId: 'customer-data-platform',
+    dataInvolved: 'Restricted customer records',
+    policyId: 'sensitive-data-policy',
+    policyName: 'Sensitive Data Policy',
+    risk: 'high',
+    status: 'blocked',
+    decision: 'Blocked by policy',
+    timestamp: '2026-09-25T10:38:00Z',
+    technical: {
+      requestId: 'req-1038',
+      agentId: 'collections-assistant',
+      policyId: 'sensitive-data-policy',
+      apiEndpoint: '/api/v1/customers/export/full',
+      responseCode: 403,
+      executionDuration: '120ms',
+      environment: 'production'
+    }
+  },
+  {
+    id: 'act-004',
+    agentId: 'financial-analysis-agent',
+    agentName: 'Financial Analysis Agent',
+    action: 'export_customer_records',
+    actionDescription: 'Attempted to export customer records',
+    system: 'Customer Data Platform',
+    systemId: 'customer-data-platform',
+    dataInvolved: 'Customer records',
+    policyId: 'sensitive-data-policy',
+    policyName: 'Sensitive Data Policy',
+    risk: 'medium',
+    status: 'blocked',
+    decision: 'Blocked by policy',
+    timestamp: '2026-09-25T10:35:00Z',
+    technical: {
+      requestId: 'req-1035',
+      agentId: 'financial-analysis-agent',
+      policyId: 'sensitive-data-policy',
+      apiEndpoint: '/api/v1/customers/export/batch',
+      responseCode: 403,
+      executionDuration: '95ms',
+      environment: 'production'
+    }
+  },
+  {
+    id: 'act-005',
+    agentId: 'revenue-forecast-agent',
+    agentName: 'Revenue Forecast Agent',
+    action: 'generate_forecast',
+    actionDescription: 'Generated quarterly revenue forecast',
+    system: 'Analytics Workspace',
+    systemId: 'analytics-workspace',
+    dataInvolved: 'Revenue data aggregates',
+    risk: 'low',
+    status: 'completed',
+    timestamp: '2026-09-25T10:31:00Z',
+    technical: {
+      requestId: 'req-1031',
+      agentId: 'revenue-forecast-agent',
+      apiEndpoint: '/api/v1/analytics/forecast/generate',
+      responseCode: 200,
+      executionDuration: '2450ms',
+      environment: 'production'
+    }
+  },
+  {
+    id: 'act-006',
+    agentId: 'fraud-investigation-agent',
+    agentName: 'Fraud Investigation Agent',
+    action: 'create_investigation',
+    actionDescription: 'Triggered investigation workflow',
+    system: 'Fraud Detection API',
+    systemId: 'fraud-detection-api',
+    dataInvolved: 'Investigation case data',
+    policyId: 'human-approval-policy',
+    policyName: 'Human Approval Policy',
+    risk: 'medium',
+    status: 'completed',
+    timestamp: '2026-09-25T10:24:00Z',
+    technical: {
+      requestId: 'req-1024',
+      agentId: 'fraud-investigation-agent',
+      policyId: 'human-approval-policy',
+      apiEndpoint: '/api/v1/fraud/investigations/create',
+      responseCode: 201,
+      executionDuration: '560ms',
+      environment: 'production'
+    }
+  },
+  {
+    id: 'act-007',
+    agentId: 'customer-support-agent',
+    agentName: 'Customer Support Agent',
+    action: 'route_ticket',
+    actionDescription: 'Routed customer inquiry to specialist',
+    system: 'CRM',
+    systemId: 'crm',
+    dataInvolved: 'Customer inquiry ticket',
+    risk: 'low',
+    status: 'completed',
+    timestamp: '2026-09-25T10:18:00Z',
+    technical: {
+      requestId: 'req-1018',
+      agentId: 'customer-support-agent',
+      apiEndpoint: '/api/v1/crm/tickets/route',
+      responseCode: 200,
+      executionDuration: '112ms',
+      environment: 'production'
+    }
+  },
+  {
+    id: 'act-008',
+    agentId: 'financial-analysis-agent',
+    agentName: 'Financial Analysis Agent',
+    action: 'generate_report',
+    actionDescription: 'Generated anomaly detection report',
+    system: 'Analytics Workspace',
+    systemId: 'analytics-workspace',
+    dataInvolved: 'Financial anomaly data',
+    risk: 'low',
+    status: 'completed',
+    timestamp: '2026-09-25T10:12:00Z',
+    technical: {
+      requestId: 'req-1012',
+      agentId: 'financial-analysis-agent',
+      apiEndpoint: '/api/v1/analytics/reports/anomaly',
+      responseCode: 200,
+      executionDuration: '1850ms',
+      environment: 'production'
+    }
+  },
+  {
+    id: 'act-009',
+    agentId: 'revenue-forecast-agent',
+    agentName: 'Revenue Forecast Agent',
+    action: 'read_revenue_data',
+    actionDescription: 'Read historical revenue data',
+    system: 'Financial Database',
+    systemId: 'financial-db',
+    dataInvolved: 'Historical revenue records',
+    risk: 'low',
+    status: 'allowed',
+    timestamp: '2026-09-25T10:05:00Z',
+    technical: {
+      requestId: 'req-1005',
+      agentId: 'revenue-forecast-agent',
+      apiEndpoint: '/api/v1/db/query/revenue',
+      responseCode: 200,
+      executionDuration: '140ms',
+      environment: 'production'
+    }
+  },
+  {
+    id: 'act-010',
+    agentId: 'fraud-investigation-agent',
+    agentName: 'Fraud Investigation Agent',
+    action: 'query_patterns',
+    actionDescription: 'Queried customer transaction patterns',
+    system: 'Financial Database',
+    systemId: 'financial-db',
+    dataInvolved: 'Transaction pattern data',
+    policyId: 'sensitive-data-policy',
+    policyName: 'Sensitive Data Policy',
+    risk: 'medium',
+    status: 'allowed',
+    timestamp: '2026-09-25T09:58:00Z',
+    technical: {
+      requestId: 'req-0958',
+      agentId: 'fraud-investigation-agent',
+      policyId: 'sensitive-data-policy',
+      apiEndpoint: '/api/v1/db/query/patterns',
+      responseCode: 200,
+      executionDuration: '320ms',
+      environment: 'production'
+    }
+  },
+  {
+    id: 'act-011',
+    agentId: 'collections-assistant',
+    agentName: 'Collections Assistant',
+    action: 'generate_report',
+    actionDescription: 'Generated collection status report',
+    system: 'CRM',
+    systemId: 'crm',
+    dataInvolved: 'Collection status data',
+    risk: 'low',
+    status: 'completed',
+    timestamp: '2026-09-25T09:45:00Z',
+    technical: {
+      requestId: 'req-0945',
+      agentId: 'collections-assistant',
+      apiEndpoint: '/api/v1/crm/reports/collections',
+      responseCode: 200,
+      executionDuration: '650ms',
+      environment: 'production'
+    }
+  },
+  {
+    id: 'act-012',
+    agentId: 'customer-support-agent',
+    agentName: 'Customer Support Agent',
+    action: 'search_knowledge_base',
+    actionDescription: 'Accessed knowledge base for customer inquiry',
+    system: 'Knowledge Base',
+    systemId: 'knowledge-base',
+    dataInvolved: 'Knowledge base articles',
+    risk: 'low',
+    status: 'allowed',
+    timestamp: '2026-09-25T09:30:00Z',
+    technical: {
+      requestId: 'req-0930',
+      agentId: 'customer-support-agent',
+      apiEndpoint: '/api/v1/kb/search',
+      responseCode: 200,
+      executionDuration: '65ms',
+      environment: 'production'
+    }
+  }
+];

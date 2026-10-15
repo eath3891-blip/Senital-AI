@@ -1,0 +1,35 @@
+.container {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-family);
+}
+
+.size-sm {
+  font-size: 12px;
+}
+
+.size-md {
+  font-size: 14px;
+}
+
+.size-lg {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.level-low {
+  color: var(--color-risk-low);
+}
+
+.level-medium {
+  color: var(--color-risk-medium);
+}
+
+.level-high {
+  color: var(--color-risk-high);
+}
+
+.level-critical {
+  color: var(--color-risk-critical);
+}

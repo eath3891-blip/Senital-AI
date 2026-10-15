@@ -1,0 +1,236 @@
+.container {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-text-secondary, #6B6B6B);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 32px;
+  transition: color 0.2s ease;
+}
+
+.backLink:hover {
+  color: var(--color-text-primary, #1A1A1A);
+}
+
+.header {
+  margin-bottom: 40px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--color-border, rgba(0,0,0,0.08));
+}
+
+.title {
+  font-size: var(--text-page-title, 40px);
+  font-weight: bold;
+  color: var(--color-text-primary, #1A1A1A);
+  margin: 0 0 12px 0;
+}
+
+.subtitle {
+  font-size: var(--text-section, 28px);
+  font-weight: 500;
+  color: var(--color-text-secondary, #6B6B6B);
+  margin: 0 0 24px 0;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.timestamp {
+  font-size: 14px;
+  color: var(--color-text-tertiary, #999999);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sectionTitle {
+  font-size: var(--text-card-heading, 18px);
+  font-weight: 600;
+  color: var(--color-text-primary, #1A1A1A);
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  background: var(--color-surface, #FFFFFF);
+  border: 1px solid var(--color-border, rgba(0,0,0,0.08));
+  border-radius: var(--radius-lg, 14px);
+  padding: 24px;
+  box-shadow: var(--shadow-sm, 0 1px 2px rgba(0,0,0,0.04));
+}
+
+.gridItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-size: 13px;
+  color: var(--color-text-secondary, #6B6B6B);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.value {
+  font-size: 15px;
+  color: var(--color-text-primary, #1A1A1A);
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-accent, #2B5CE6);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.icon {
+  color: inherit;
+}
+
+.policyCard {
+  background: var(--color-surface, #FFFFFF);
+  border: 1px solid var(--color-border, rgba(0,0,0,0.08));
+  border-radius: var(--radius-lg, 14px);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.policyHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.policyIcon {
+  color: var(--color-text-secondary, #6B6B6B);
+}
+
+.policyLink {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-accent, #2B5CE6);
+  text-decoration: none;
+}
+
+.policyLink:hover {
+  text-decoration: underline;
+}
+
+.policyResult {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.riskCard {
+  background: var(--color-surface, #FFFFFF);
+  border: 1px solid var(--color-border, rgba(0,0,0,0.08));
+  border-radius: var(--radius-lg, 14px);
+  padding: 24px;
+}
+
+.toggleButton {
+  background: none;
+  border: none;
+  color: var(--color-accent, #2B5CE6);
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px 0;
+  text-align: left;
+  display: inline-block;
+  width: fit-content;
+}
+
+.toggleButton:hover {
+  text-decoration: underline;
+}
+
+.techDetails {
+  background: var(--color-surface, #FFFFFF);
+  border: 1px solid var(--color-border, rgba(0,0,0,0.08));
+  border-radius: var(--radius-lg, 14px);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: #F8F9FA;
+  font-family: monospace;
+}
+
+.techRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 8px 0;
+  border-bottom: 1px dashed var(--color-border, rgba(0,0,0,0.08));
+}
+
+.techRow:last-child {
+  border-bottom: none;
+}
+
+.techLabel {
+  width: 180px;
+  color: var(--color-text-secondary, #6B6B6B);
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.techValue {
+  color: var(--color-text-primary, #1A1A1A);
+  font-size: 13px;
+  word-break: break-all;
+}
+
+.colorGreen { color: var(--color-status-active, #34A853); }
+.colorRed { color: var(--color-status-blocked, #E8512D); }
+
+.errorState {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+  
+  .techLabel {
+    width: 100%;
+  }
+}

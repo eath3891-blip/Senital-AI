@@ -1,0 +1,200 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: var(--text-page-title, 40px);
+  font-weight: bold;
+  color: var(--color-text-primary, #1A1A1A);
+  margin: 0 0 8px 0;
+}
+
+.subtitle {
+  font-size: var(--text-body, 15px);
+  color: var(--color-text-secondary, #6B6B6B);
+  margin: 0;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.filterGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.tableContainer {
+  background: var(--color-surface, #FFFFFF);
+  border: 1px solid var(--color-border, rgba(0,0,0,0.08));
+  border-radius: var(--radius-lg, 14px);
+  overflow-x: auto;
+  box-shadow: var(--shadow-sm, 0 1px 2px rgba(0,0,0,0.04));
+  display: block;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table th {
+  padding: 16px 24px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-text-secondary, #6B6B6B);
+  border-bottom: 1px solid var(--color-border, rgba(0,0,0,0.08));
+  background: var(--color-bg, #FAFAF8);
+}
+
+.table td {
+  padding: 16px 24px;
+  font-size: 14px;
+  color: var(--color-text-primary, #1A1A1A);
+  border-bottom: 1px solid var(--color-border, rgba(0,0,0,0.08));
+  vertical-align: middle;
+}
+
+.tableRow {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.tableRow:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.01);
+}
+
+.tableRow:hover {
+  background-color: var(--color-accent-soft, #EEF2FC);
+}
+
+.tableRow:last-child td {
+  border-bottom: none;
+}
+
+.timestamp {
+  font-family: monospace;
+  color: var(--color-text-secondary, #6B6B6B);
+}
+
+.agentLink, .policyLink {
+  color: var(--color-accent, #2B5CE6);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.agentLink:hover, .policyLink:hover {
+  text-decoration: underline;
+}
+
+.actionCell {
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emptyPolicy {
+  color: var(--color-text-tertiary, #999999);
+}
+
+.actor {
+  color: var(--color-text-primary, #1A1A1A);
+}
+
+.emptyState {
+  padding: 60px 20px;
+  text-align: center;
+  color: var(--color-text-secondary, #6B6B6B);
+  font-size: 15px;
+}
+
+/* Mobile Card Layout */
+.mobileCards {
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card {
+  background: var(--color-surface, #FFFFFF);
+  border: 1px solid var(--color-border, rgba(0,0,0,0.08));
+  border-radius: var(--radius-md, 10px);
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-sm, 0 1px 2px rgba(0,0,0,0.04));
+}
+
+.card:hover {
+  border-color: var(--color-accent, #2B5CE6);
+  transform: translateY(-1px);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cardAgent {
+  font-weight: 600;
+  color: var(--color-accent, #2B5CE6);
+  font-size: 15px;
+}
+
+.cardAction {
+  color: var(--color-text-primary, #1A1A1A);
+  font-size: 14px;
+}
+
+.cardBadges {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+  align-items: center;
+}
+
+.actorBadge {
+  font-size: 12px;
+  color: var(--color-text-secondary, #6B6B6B);
+  background: var(--color-bg, #FAFAF8);
+  padding: 2px 8px;
+  border-radius: 12px;
+  border: 1px solid var(--color-border, rgba(0,0,0,0.08));
+}
+
+@media (max-width: 1024px) {
+  .tableContainer {
+    display: none;
+  }
+  .mobileCards {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+}

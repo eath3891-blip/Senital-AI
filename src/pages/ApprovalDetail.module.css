@@ -1,0 +1,328 @@
+.container {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  font-size: var(--text-body);
+  margin-bottom: 24px;
+  transition: color 0.2s ease;
+}
+
+.backLink:hover {
+  color: var(--color-text-primary);
+}
+
+.header {
+  margin-bottom: 48px;
+}
+
+.headerTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: var(--text-page-title);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.headerSub {
+  font-size: var(--text-body);
+  color: var(--color-text-secondary);
+}
+
+.agentLink {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.agentLink:hover {
+  text-decoration: underline;
+}
+
+.section {
+  margin-bottom: 48px;
+}
+
+.sectionTitle {
+  font-size: var(--text-section);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0 0 16px 0;
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+}
+
+.actionName {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0 0 8px 0;
+}
+
+.requestedTime {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+.requestedTime a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+.requestedTime a:hover {
+  text-decoration: underline;
+}
+
+.quoteBlock {
+  border-left: 4px solid var(--color-accent);
+  background: var(--color-accent-soft);
+  padding: 24px;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+.reasonText {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.gridCard {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+.gridItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.gridLabel {
+  font-size: var(--text-meta);
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.gridValue {
+  font-size: 15px;
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+.policyRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.policyIcon {
+  color: var(--color-text-tertiary);
+  margin-top: 2px;
+}
+
+.policyName {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  margin-bottom: 4px;
+  display: inline-block;
+}
+
+.policyName:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+.policyResult {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.riskCard {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  border-left: 4px solid transparent;
+}
+
+.riskCard[data-risk='low'] {
+  border-left-color: var(--color-risk-low);
+}
+.riskCard[data-risk='medium'] {
+  border-left-color: var(--color-risk-medium);
+}
+.riskCard[data-risk='high'] {
+  border-left-color: var(--color-risk-high);
+}
+.riskCard[data-risk='critical'] {
+  border-left-color: var(--color-risk-critical);
+}
+
+.riskReason {
+  margin: 16px 0 0 0;
+  font-size: 15px;
+  color: var(--color-text-secondary);
+}
+
+.historyList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.historyItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.historyIcon {
+  color: var(--color-text-tertiary);
+  margin-top: 4px;
+}
+
+.historyDetails {
+  flex: 1;
+}
+
+.historyDesc {
+  margin: 0 0 4px 0;
+  font-size: 14px;
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+.historyTime {
+  font-size: 12px;
+  color: var(--color-text-tertiary);
+}
+
+.noHistory {
+  color: var(--color-text-tertiary);
+  font-style: italic;
+}
+
+.viewFullActivity {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-block;
+  margin-top: 8px;
+}
+
+.viewFullActivity:hover {
+  text-decoration: underline;
+}
+
+.decisionArea {
+  margin-top: 64px;
+}
+
+.decisionCard {
+  background: var(--color-accent-soft);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  text-align: center;
+}
+
+.decisionTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0 0 8px 0;
+}
+
+.decisionSubtitle {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  margin: 0 0 24px 0;
+}
+
+.decisionButtons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btnApprove,
+.btnReject,
+.btnMoreInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btnApprove {
+  background-color: var(--color-status-active);
+  color: white;
+  border: none;
+}
+.btnApprove:hover {
+  background-color: #2e9649;
+}
+
+.decisionResult {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.decisionResult h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.decisionResult p {
+  margin: 0;
+  color: var(--color-text-secondary);
+}
+
+.resultApproved {
+  color: var(--color-status-active);
+}
+
+.resultRejected {
+  color: var(--color-risk-critical);
+}
+
+@media (max-width: 600px) {
+  .decisionButtons {
+    flex-direction: column;
+  }
+}

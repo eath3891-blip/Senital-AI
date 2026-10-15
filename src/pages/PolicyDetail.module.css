@@ -1,0 +1,281 @@
+.container {
+  width: 100%;
+  max-width: 960px;
+  display: flex;
+  flex-direction: column;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+
+.backLink:hover {
+  color: var(--color-text-primary);
+}
+
+.header {
+  margin-bottom: 40px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.title {
+  font-size: var(--text-page-title);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+  margin: 0;
+  max-width: 700px;
+  line-height: 1.5;
+}
+
+.section {
+  margin-bottom: 48px;
+}
+
+.sectionTitle {
+  font-size: var(--text-section);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0 0 24px 0;
+}
+
+.visualization {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ifSection {
+  background-color: var(--color-accent-soft);
+  border: 1px solid rgba(43, 92, 230, 0.1);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  width: 100%;
+  position: relative;
+}
+
+.ifLabel {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--color-accent);
+  margin-bottom: 16px;
+}
+
+.conditionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.conditionCard {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  box-shadow: var(--shadow-sm);
+  width: 100%;
+  max-width: 600px;
+}
+
+.field {
+  font-family: monospace;
+  background: rgba(0,0,0,0.04);
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+.operator {
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.value {
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.andLabel {
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 8px 0;
+}
+
+.line {
+  width: 2px;
+  height: 32px;
+  background-color: var(--color-border);
+}
+
+.arrowIcon {
+  color: var(--color-text-tertiary);
+  margin-top: -4px;
+}
+
+.thenSection {
+  background-color: rgba(52, 168, 83, 0.05);
+  border: 1px solid rgba(52, 168, 83, 0.2);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  width: 100%;
+}
+
+.thenLabel {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--color-risk-low);
+  margin-bottom: 16px;
+}
+
+.actionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.actionItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  box-shadow: var(--shadow-sm);
+  max-width: 600px;
+}
+
+.checkIcon {
+  color: var(--color-risk-low);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.detailsCard, .agentsCard {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+}
+
+.cardHeading {
+  font-size: var(--text-card-heading);
+  font-weight: 600;
+  margin: 0 0 20px 0;
+  color: var(--color-text-primary);
+}
+
+.detailsList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0;
+}
+
+.detailItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.detailItem dt {
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.detailItem dd {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+.agentsList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.agentItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.2s;
+}
+
+.agentItem:hover {
+  background-color: rgba(0,0,0,0.02);
+}
+
+.agentName {
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.agentBadges {
+  display: flex;
+  gap: 8px;
+}
+
+.emptyText {
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  margin: 0;
+}
+
+.errorState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+  color: var(--color-text-secondary);
+}
+
+.errorIcon {
+  color: var(--color-risk-medium);
+  margin-bottom: 16px;
+}

@@ -1,0 +1,75 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-family: var(--font-family);
+  gap: 6px;
+}
+
+.size-sm {
+  height: 22px;
+  padding: 0 8px;
+  font-size: 11px;
+}
+
+.size-md {
+  height: 26px;
+  padding: 0 10px;
+  font-size: 12px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+/* Colors */
+.neutral {
+  background-color: #F0F0F0;
+  color: var(--color-text-secondary);
+}
+
+/* Risk */
+.riskLow {
+  background-color: rgba(52, 168, 83, 0.1);
+  color: var(--color-risk-low);
+}
+.riskMedium {
+  background-color: rgba(232, 163, 23, 0.1);
+  color: var(--color-risk-medium);
+}
+.riskHigh {
+  background-color: rgba(232, 81, 45, 0.1);
+  color: var(--color-risk-high);
+}
+.riskCritical {
+  background-color: rgba(196, 30, 58, 0.1);
+  color: var(--color-risk-critical);
+}
+
+/* Status */
+.statusActive {
+  background-color: rgba(52, 168, 83, 0.1);
+  color: var(--color-status-active);
+}
+.statusPending {
+  background-color: rgba(232, 163, 23, 0.1);
+  color: var(--color-status-pending);
+}
+.statusBlocked {
+  background-color: rgba(232, 81, 45, 0.1);
+  color: var(--color-status-blocked);
+}
+.statusInvestigating {
+  background-color: rgba(138, 43, 226, 0.1);
+  color: #8A2BE2;
+}
+.statusInactive {
+  background-color: #F0F0F0;
+  color: var(--color-text-tertiary);
+}
